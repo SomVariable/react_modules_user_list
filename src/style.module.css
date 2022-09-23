@@ -1,0 +1,14 @@
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightblue;
+}
+
+.users{
+    width: 30vw;
+    padding: 20px;
+    background-color: azure;
+    border-radius: 12px;
+}

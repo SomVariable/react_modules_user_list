@@ -1,0 +1,41 @@
+.user{
+    display: flex;
+}
+
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 50px;
+}
+
+.info{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info > p{
+    display: inline;
+    margin: 0;
+}
+.info .name{
+    font-size: 16px;
+    font-weight: 600;
+    color: darkblue;
+}
+
+.info .email{
+    color: slategray;
+    font-size: 12px;
+}
+.plus{
+    display: inline;
+    margin-left:  auto;
+    color: slategray;
+    opacity: .8;
+    font-size: 30px;
+}
+.plus:hover{
+    cursor: pointer;
+}
+

@@ -36,18 +36,12 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(processes.confirmed)
     changeProcess('waiting')
     getUsers(`https://reqres.in/api/users?page=${page}`)
-    .then(res => {
-      return res.json()
-    })
     .then(json => {
-      changeProcess('loading')
       setUsers(json.data)
       changeProcess('confirmed')
     })
-    .catch(err => console.warn(err))
     
     console.log(users)
   }, [page])
@@ -55,7 +49,7 @@ function App() {
   return (
     <div className = {style.app}>
       <div className={style.users}>
-          {stateMachine('confirmed', Users, {users})}
+          {stateMachine(defineProcess(processes), Users, {users})}
       </div>
     
       <div className="">
